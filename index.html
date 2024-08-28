@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#EU CONFIO VIAÇÃO SETE</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://www.instagram.com/viacaosete?igsh=M2s3aHZsZjQ0em1i" target="_blank">Instagram</a></li>
+                <li><a href="https://www.facebook.com/viacaosete" target="_blank">Facebook</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="vereador-section">
+        <div class="vereador-container">
+            <img src="assets/aviacaoSete.png" alt="Vereador" class="vereador-image">
+        </div>
+    </section>
+    <img src="assets/viacaoSete.png" class="name_empresa">
+    
+    <h4>Personalize seu perfil demonstrando sua confiança nesta empresa.</h4>
+    <h4></h4>
+    <h6>Carregue uma foto de sua galeria!</h6>
+    <div class="custom-file-upload">
+        <label for="imageInput">
+            <img src="assets/upload.svg" alt="Upload Ícone" class="upload-icon">
+            Selecionar Imagem
+        </label>
+        <input type="file" id="imageInput">
+    </div>
+
+
+    <section class="upload-section">
+    <br><br>
+    <canvas id="canvas" width="1080" height="1080"></canvas>
+    <br><br>
+    
+    <div class="btn">
+        <div class="btn-just">
+            <label class="btn-img" for="zoomRange">Zoom:</label>
+            <input type="range" id="zoomRange" min="0.1" max="3" step="0.1" value="1">
+        </div>
+       
+        <div class="btn-just">
+            <label class="btn-img"  for="positionYRange">Ajuste a posição:</label>
+            <input    type="range" id="positionYRange" min="-500" max="500" step="1" value="0">
+        </div>
+        
+        
+    </div>
+
+
+    <button id="downloadBtn" class="custom-download-btn" style="display: none;">
+        <img src="assets/download.svg" alt="Download Ícone" class="download-icon">
+        Baixar Imagem
+    </button>
+    
+</section>
+    <footer>
+        <h5>Viação Sete</h5>
+        <h6>Agencia TRV</h6>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

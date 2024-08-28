@@ -1,0 +1,235 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0; /* Corrigido o padding */
+}
+
+/* Header e Navegação */
+header {
+    width: 100%;
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Alterado para inline-block para melhor controle em mobile */
+    margin: 0 10px; /* Reduzido para melhor ajuste em telas menores */
+}
+
+nav ul li a {
+    color: #00437d;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px; /* Tamanho da fonte reduzido para melhor ajuste */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #D31433;
+}
+
+
+h1{
+    color: #00437d;
+}
+
+.name_empresa{
+    width: 500px;
+}
+
+h4{
+    color: #00437d;;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* Seção do Vereador */
+.vereador-section { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Ajustado para melhorar em telas menores */
+}
+
+.vereador-container {
+    position: relative;
+    width: 80%; /* Ajustado para se adaptar ao tamanho da tela */
+    max-width: 300px; /* Máxima largura para manter a proporção */
+    height: auto; /* Ajustado para manter a proporção */
+    overflow: hidden;
+}
+
+.vereador-image {
+    width: 100%;
+    height: auto;
+    animation: moveVereador 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveVereador {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+/* Canvas e Controle de Imagem */
+#canvas {
+    border: 0.5px solid #00000000;
+    margin-top: 20px;
+    max-width: 100%;
+    max-height: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Ajustado para melhorar em telas menores */
+    padding: 20px; /* Adicionado para evitar que o conteúdo fique grudado nas bordas */
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload label {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #012d6b;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Ajustado para melhor ajuste */
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload .upload-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.custom-file-upload label:hover {
+    background-color: #013785;
+}
+
+.custom-download-btn {
+    display: none; /* Inicialmente escondido */
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #012e6d
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.custom-download-btn .download-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.custom-download-btn:hover {
+    background-color: #012f70;
+}
+
+.btn{
+    width: 100%; /* Ajustado para telas menores */
+    display: flex;
+    flex-direction: column; /* Ajustado para melhor layout em telas pequenas */
+    align-items: center;
+    color: #333;
+    padding: 10px; /* Adicionado padding para espaçamento */
+}
+
+.btn-just{
+    display: flex;
+    align-items: center;
+    color: #00437d;
+}
+
+.btn-img{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #00437d;;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer h5, footer h6 {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+    .btn {
+        width: 100%; /* Ajusta a largura dos botões em telas menores */
+    }
+
+    .btn-just {
+        flex-direction: column; /* Ajusta a direção dos itens em telas menores */
+    }
+
+    .vereador-section {
+        height: auto; /* Ajusta a altura da seção do vereador em telas menores */
+    }
+
+    .vereador-container {
+        width: 90%; /* Ajusta a largura da imagem do vereador em telas menores */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Reduz o espaçamento entre itens no menu */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Ajusta o tamanho da fonte no menu */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Ajusta o tamanho da fonte do título principal em telas menores */
+    }
+
+    .custom-file-upload label {
+        font-size: 14px; /* Ajusta o tamanho da fonte do botão de upload em telas menores */
+    }
+
+    .custom-download-btn {
+        font-size: 14px; /* Ajusta o tamanho da fonte do botão de download em telas menores */
+    }
+}
